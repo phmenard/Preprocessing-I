@@ -1,3 +1,5 @@
+@footerBackround: black;
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -54,6 +56,147 @@ table {
 }
 
 html, body {
+	
     height: 100%;
 }
+
+// Start header section
+
+header {
+	display: flex;
+	padding: 3% 0 0 0;
+	justify-content: space-evenly;
+}
+
+header img {
+	width: 10%;
+}
+
+header .navigation {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+	width: 80%;
+	border-bottom: 1px solid gray;
+    
+}
+
+.name {
+	#position {
+		font-size: 0.8rem;
+	}
+}
+
+.navigation .nav-links {
+    width: 50%;
+    
+}
+
+.navigation .nav-links nav {
+    display: flex;
+	justify-content: space-between
+}
+
+.name {
+	margin-right: 30%;
+	font-size: 2rem;
+}
+
+// end header
+
+
+// Start intro section
+
+.intro {
+	display: flex;
+	justify-content: center;
+
+	section {
+		margin: 1%;
+	}
+
+}
+
+.intro-a {
+
+	width: 50%;
+	h1 {
+		font-size: 1.5rem;
+	}
+
+	p {
+		margin-bottom: 2%;
+	}
+	
+}
+
+// End intro
+
+
+// start education info
+
+.skills {
+	text-align: center;
+	
+	h3 {
+		font-size: 2rem;
+		font-weight: bold;
+	}
+	
+}
+
+.skills-a {
+	display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+	flex-wrap: wrap;
+	
+	
+}
+
+.skills-a section {
+	margin: 1%;
+    text-align: left;
+	width: 25%;
+	
+	h2 {
+		font-weight: bold;
+	}
+
+	#ide-nav{
+		margin-right: 2%;
+	}
+}
+
+
+// end education
+
+// Start footer 
+
+.my-footer {
+	display: flex;
+	justify-content: center;
+	background-color: @footerBackround;
+	
+
+	section {
+		display: flex;
+		justify-content: center;
+		flex-direction: column; 
+		margin: 1%;
+		width: 80%;
+		color: grey;
+	}
+	
+}
+
+
+.copyright {
+    text-align: center;
+    margin-top: 3%;
+}
+
+// End footer
+
 
