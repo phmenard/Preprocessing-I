@@ -1,3 +1,5 @@
+@footerBackround: black;
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -53,7 +55,230 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+// variables
+
+@theme-color: #355C7D;
+@default-margin: 60%;
+@inner-margin: 40%;
+
+// end variables
+
+// mixin
+.flex-center() {
+	display: flex;
+	justify-content: center;
 }
 
+.flex-space-evenly() {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.inner-margin() {
+	width: @inner-margin;
+	margin: 1% 0 1% 0;
+}
+//end mixin
+
+
+
+html, body {
+	
+	height: 100%;
+	 
+}
+
+h2 {
+	font-size: 1rem;
+	font-weight: bold;
+	margin: 1% 0 1% 0;
+}
+
+#my-header {
+	.flex-center();
+	border: 1px solid red;
+	
+
+	#header-info h1, p {
+		margin: 1%;
+		color: white;
+	}
+	
+	
+	header {
+		margin: 2% 0 0 0;
+		width: @default-margin;
+		background-color: @theme-color;
+
+		h1 {
+			margin-top: 1%;
+		}
+		
+		p {
+			font-size: 0.7rem;
+			margin-top: 0.2%;
+		}
+
+		nav {
+			display: flex;
+			justify-content: flex-end;
+			
+
+			a {
+				padding: 0 8% 1% 0;
+				margin-top: 2%;
+				text-decoration: none;
+				color: white;
+
+				
+			}
+
+			#header-info {
+				display: flex;
+				justify-content: center;
+				
+
+				
+			}
+
+			@media(max-width:800px) {
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			
+			
+		}
+
+		
+	}
+}
+
+#profile {
+	display: flex;
+	justify-content: center;
+
+	#profile-info {
+		display: flex;
+		
+		width: @default-margin;
+		border: 1px solid red;
+
+		#profile-a {
+			
+			img {
+				@media(max-width:750px) {
+					width: 100%;
+					padding-bottom: 3%;
+				}
+			}
+
+		}
+
+		#profile-b h1 {
+			.flex-space-evenly();
+			
+			@media(max-width:800px) {
+				margin: 3% 0 3% 0;
+				
+			}
+		}
+
+		@media(max-width:800px) {
+			flex-direction: column;
+			justify-content: center;
+
+		}
+
+		
+	}
+}
+
+#experience-goals {
+	display: flex;
+	justify-content: center;
+	
+
+	#experience-goals-info {
+		.flex-space-evenly();
+		width: @default-margin;
+		border: 1px solid red;
+
+		#experience-goals-info-a {
+			.inner-margin();
+
+			
+		}
+
+		#experience-goals-info-b {
+			width: @inner-margin;
+			margin: 1% 0 1% 0;
+		
+		}
+
+		
+	}
+}
+
+#skills {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	h3 {
+		font-size: 1rem;
+		font-weight: bold;
+		margin: 1% 0 1% 0;
+	}
+	
+  		
+
+	#skills-container {	
+		.flex-space-evenly();
+		flex-wrap: wrap;
+		width: @default-margin;
+		border: 1px solid red;
+		background-color: 355C7;
+
+		section {
+			display: flex;
+			flex-wrap: wrap;
+			padding-bottom: 1%;
+			width: @inner-margin;
+			border: 1px solid blue;
+
+			@media(max-width:800px) {
+				width: auto;
+				padding-bottom: 3%;
+				flex-direction: column;
+			}
+	
+		}
+
+		#experience-goals-info-b {
+			flex-direction: column;
+	
+		}
+
+		@media(max-width:800px) {
+			
+			flex-direction: column;
+		}
+
+	}
+}
+
+#footer {
+	display: flex;
+	justify-content: center;
+
+	#footer-content {
+		display: flex;
+		width: @default-margin;
+		color:white;
+		background-color: @theme-color;
+		padding: 1%;
+	}
+}

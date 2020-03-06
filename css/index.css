@@ -1,1 +1,284 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1% 0 1% 0;
+}
+#my-header {
+  display: flex;
+  justify-content: center;
+  border: 1px solid red;
+}
+#my-header #header-info h1,
+#my-header p {
+  margin: 1%;
+  color: white;
+}
+#my-header header {
+  margin: 2% 0 0 0;
+  width: 60%;
+  background-color: #355C7D;
+}
+#my-header header h1 {
+  margin-top: 1%;
+}
+#my-header header p {
+  font-size: 0.7rem;
+  margin-top: 0.2%;
+}
+#my-header header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+#my-header header nav a {
+  padding: 0 8% 1% 0;
+  margin-top: 2%;
+  text-decoration: none;
+  color: white;
+}
+#my-header header nav #header-info {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 800px) {
+  #my-header header nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+#profile {
+  display: flex;
+  justify-content: center;
+}
+#profile #profile-info {
+  display: flex;
+  width: 60%;
+  border: 1px solid red;
+}
+@media (max-width: 750px) {
+  #profile #profile-info #profile-a img {
+    width: 100%;
+    padding-bottom: 3%;
+  }
+}
+#profile #profile-info #profile-b h1 {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 800px) {
+  #profile #profile-info #profile-b h1 {
+    margin: 3% 0 3% 0;
+  }
+}
+@media (max-width: 800px) {
+  #profile #profile-info {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+#experience-goals {
+  display: flex;
+  justify-content: center;
+}
+#experience-goals #experience-goals-info {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  border: 1px solid red;
+}
+#experience-goals #experience-goals-info #experience-goals-info-a {
+  width: 40%;
+  margin: 1% 0 1% 0;
+}
+#experience-goals #experience-goals-info #experience-goals-info-b {
+  width: 40%;
+  margin: 1% 0 1% 0;
+}
+#skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#skills h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1% 0 1% 0;
+}
+#skills  #skills-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 60%;
+  border: 1px solid red;
+  background-color: 355C7;
+}
+#skills  #skills-container section {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1%;
+  width: 40%;
+  border: 1px solid blue;
+}
+@media (max-width: 800px) {
+  #skills  #skills-container section {
+    width: auto;
+    padding-bottom: 3%;
+    flex-direction: column;
+  }
+}
+#skills  #skills-container #experience-goals-info-b {
+  flex-direction: column;
+}
+@media (max-width: 800px) {
+  #skills  #skills-container {
+    flex-direction: column;
+  }
+}
+#footer {
+  display: flex;
+  justify-content: center;
+}
+#footer #footer-content {
+  display: flex;
+  width: 60%;
+  color: white;
+  background-color: #355C7D;
+  padding: 1%;
+}
