@@ -55,7 +55,30 @@ table {
     box-sizing: border-box;
 }
 
+// variables
+
 @theme-color: #355C7D;
+@default-margin: 60%;
+@inner-margin: 40%;
+
+// end variables
+
+// mixin
+.flex-center() {
+	display: flex;
+	justify-content: center;
+}
+
+.flex-space-evenly() {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.inner-margin() {
+	width: @inner-margin;
+	margin: 1% 0 1% 0;
+}
+//end mixin
 
 
 
@@ -72,8 +95,9 @@ h2 {
 }
 
 #my-header {
-	display: flex;
-	justify-content: center;
+	.flex-center();
+	border: 1px solid red;
+	
 
 	#header-info h1, p {
 		margin: 1%;
@@ -83,7 +107,7 @@ h2 {
 	
 	header {
 		margin: 2% 0 0 0;
-		width: 60%;
+		width: @default-margin;
 		background-color: @theme-color;
 
 		h1 {
@@ -112,6 +136,7 @@ h2 {
 			#header-info {
 				display: flex;
 				justify-content: center;
+				
 
 				
 			}
@@ -134,16 +159,14 @@ h2 {
 	display: flex;
 	justify-content: center;
 
-	
-	
-
 	#profile-info {
 		display: flex;
-		justify-content: space-evenly;
-		width: 60%;
+		
+		width: @default-margin;
 		border: 1px solid red;
 
 		#profile-a {
+			
 			img {
 				@media(max-width:750px) {
 					width: 100%;
@@ -154,7 +177,8 @@ h2 {
 		}
 
 		#profile-b h1 {
-			margin: 1% 0 1% 0;
+			.flex-space-evenly();
+			
 			@media(max-width:800px) {
 				margin: 3% 0 3% 0;
 				
@@ -177,24 +201,20 @@ h2 {
 	
 
 	#experience-goals-info {
-		display: flex;
-		justify-content: space-evenly;
-		width: 60%;
+		.flex-space-evenly();
+		width: @default-margin;
 		border: 1px solid red;
 
 		#experience-goals-info-a {
-			width: 40%;
-			margin: 1% 0 1% 0;
+			.inner-margin();
 
 			
 		}
 
 		#experience-goals-info-b {
-			width: 40%;
+			width: @inner-margin;
 			margin: 1% 0 1% 0;
-			
-
-			
+		
 		}
 
 		
@@ -216,10 +236,9 @@ h2 {
   		
 
 	#skills-container {	
-		display: flex;
+		.flex-space-evenly();
 		flex-wrap: wrap;
-		justify-content: space-evenly;
-		width: 60%;
+		width: @default-margin;
 		border: 1px solid red;
 		background-color: 355C7;
 
@@ -227,7 +246,7 @@ h2 {
 			display: flex;
 			flex-wrap: wrap;
 			padding-bottom: 1%;
-			width: 40%;
+			width: @inner-margin;
 			border: 1px solid blue;
 
 			@media(max-width:800px) {
@@ -235,10 +254,12 @@ h2 {
 				padding-bottom: 3%;
 				flex-direction: column;
 			}
+	
+		}
 
-			
-				
-				
+		#experience-goals-info-b {
+			flex-direction: column;
+	
 		}
 
 		@media(max-width:800px) {
@@ -255,8 +276,8 @@ h2 {
 
 	#footer-content {
 		display: flex;
-		width: 60%;
-		color: white;
+		width: @default-margin;
+		color:white;
 		background-color: @theme-color;
 		padding: 1%;
 	}
