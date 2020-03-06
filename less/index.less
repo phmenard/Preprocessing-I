@@ -60,143 +60,189 @@ html, body {
     height: 100%;
 }
 
-// Start header section
+h2 {
+	font-size: 1rem;
+	font-weight: bold;
+	margin: 1% 0 1% 0;
+}
 
-header {
+#my-header {
 	display: flex;
-	padding: 3% 0 0 0;
-	justify-content: space-evenly;
-}
+	justify-content: center;
+	
+	header {
+		margin: 2% 0 0 0;
+		width: 60%;
+		border: 1px solid red;
 
-header img {
-	width: 10%;
-}
+		h1 {
+			margin-top: 1%;
+		}
+		
+		p {
+			font-size: 0.7rem;
+			margin-top: 0.2%;
+		}
 
-header .navigation {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-	width: 80%;
-	border-bottom: 1px solid gray;
-    
-}
+		nav {
+			display: flex;
+			justify-content: flex-end;
+			
 
-.name {
-	#position {
-		font-size: 0.8rem;
+			a {
+				padding: 0 8% 1% 0;
+				margin-top: 2%;
+
+				
+			}
+
+			#header-info {
+				display: flex;
+				justify-content: center;
+
+				
+			}
+
+			@media(max-width:800px) {
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			
+			
+		}
+
+		
 	}
 }
 
-.navigation .nav-links {
-    width: 50%;
-    
-}
-
-.navigation .nav-links nav {
-    display: flex;
-	justify-content: space-between
-}
-
-.name {
-	margin-right: 30%;
-	font-size: 2rem;
-}
-
-// end header
-
-
-// Start intro section
-
-.intro {
+#profile {
 	display: flex;
 	justify-content: center;
 
-	section {
-		margin: 1%;
-	}
-
-}
-
-.intro-a {
-
-	width: 50%;
-	h1 {
-		font-size: 1.5rem;
-	}
-
-	p {
-		margin-bottom: 2%;
-	}
-	
-}
-
-// End intro
-
-
-// start education info
-
-.skills {
-	text-align: center;
-	
-	h3 {
-		font-size: 2rem;
-		font-weight: bold;
-	}
-	
-}
-
-.skills-a {
-	display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-	flex-wrap: wrap;
 	
 	
-}
 
-.skills-a section {
-	margin: 1%;
-    text-align: left;
-	width: 25%;
-	
-	h2 {
-		font-weight: bold;
-	}
-
-	#ide-nav{
-		margin-right: 2%;
-	}
-}
-
-
-// end education
-
-// Start footer 
-
-.my-footer {
-	display: flex;
-	justify-content: center;
-	background-color: @footerBackround;
-	
-
-	section {
+	#profile-info {
 		display: flex;
-		justify-content: center;
-		flex-direction: column; 
-		margin: 1%;
-		width: 80%;
-		color: grey;
+		justify-content: space-evenly;
+		width: 60%;
+		border: 1px solid red;
+
+		#profile-a {
+			img {
+				@media(max-width:750px) {
+					width: 100%;
+					padding-bottom: 3%;
+				}
+			}
+
+		}
+
+		#profile-b h1 {
+			margin: 1% 0 1% 0;
+			@media(max-width:800px) {
+				margin: 3% 0 3% 0;
+				
+			}
+		}
+
+		@media(max-width:800px) {
+			flex-direction: column;
+			justify-content: center;
+
+		}
+
+		
+	}
+}
+
+#experience-goals {
+	display: flex;
+	justify-content: center;
+	
+
+	#experience-goals-info {
+		display: flex;
+		justify-content: space-evenly;
+		width: 60%;
+		border: 1px solid red;
+
+		#experience-goals-info-a {
+			width: 40%;
+			margin: 1% 0 1% 0;
+
+			
+		}
+
+		#experience-goals-info-b {
+			width: 40%;
+			margin: 1% 0 1% 0;
+
+			
+		}
+
+		
+	}
+}
+
+#skills {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	h3 {
+		font-size: 1rem;
+		font-weight: bold;
+		margin: 1% 0 1% 0;
 	}
 	
+  		
+
+	#skills-container {	
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		width: 60%;
+		border: 1px solid red;
+
+		section {
+			display: flex;
+			flex-wrap: wrap;
+			padding-bottom: 1%;
+			width: 40%;
+			border: 1px solid blue;
+
+			@media(max-width:800px) {
+				width: auto;
+				padding-bottom: 3%;
+				flex-direction: column;
+			}
+
+			
+				
+				
+		}
+
+		@media(max-width:800px) {
+			
+			flex-direction: column;
+		}
+
+	}
 }
 
+#footer {
+	display: flex;
+	justify-content: center;
 
-.copyright {
-    text-align: center;
-    margin-top: 3%;
+	#footer-content {
+		display: flex;
+		width: 60%;
+		color: white;
+		background-color: black;
+		padding: 1%;
+	}
 }
-
-// End footer
-
-
